@@ -1,0 +1,47 @@
+# AI Job Market Dashboards
+
+This repository contains interactive Dash web applications visualizing AI job market trends. Each app focuses on different aspects of AI-related job data across U.S. states.
+
+## Live Dashboards
+- **AI Job Density Map**: [Live Link](https://isodensitymap-1.onrender.com/)
+- **Top AI Skills Comparison**: [Live Link](https://isoskills.onrender.com/)
+- **AI Career Areas Comparison**: [Live Link](https://isocareerareas.onrender.com/)
+
+
+## Dashboards Overview
+### **AI Job Density Map**
+- Displays AI job density per state using a **choropleth map**.
+- Shows **total AI job listings** and **percentage of AI jobs** per state.
+- Data sourced from `DensityMapDataV2_Cleaned.csv`.
+
+### **Top AI Skills Comparison**
+- Allows users to compare **top AI-related skills** in different states.
+- Uses a **bar chart** to show skill prevalence.
+- Data sourced from `TopAISkillsChartDataV2.csv`.
+
+### **AI Career Areas Comparison**
+- Compares AI career demand across **different industries**.
+- Interactive **state-based comparison**.
+- Data sourced from `TopAICareerDataV2.csv`.
+
+##Installation & Running Locally
+Clone these repositories:
+https://github.com/smelliot1114/ISOdensitymap
+https://github.com/smelliot1114/ISOcareerareas
+https://github.com/smelliot1114/ISOskills
+
+#install required packages
+pip install -r requirements.txt
+
+#run code for viz's
+python ISOdensitymap.py
+python ISOskills.py
+python ISOcareers.py
+
+#Build Command: pip install -r requirements.txt
+#This project is deployed using Render. The start command for each app is:
+gunicorn ISOdensitymap:server
+gunicorn ISOskills:server
+gunicorn ISOcareers:server
+
+
